@@ -1,5 +1,6 @@
+import Menu from "./MenuComponent";
 
-const Sidebar = ({Icon}) => {
+const Sidebar = ({ Icon }) => {
   return (
     <div className="min-w-[300px] border-r-2 border-secondary flex flex-col ">
       <div className="header flex items-center justify-between p-5 mt-3">
@@ -10,40 +11,7 @@ const Sidebar = ({Icon}) => {
         <Icon name="Sun" color="white" size={25} />
       </div>
 
-      <nav className="mt-4 flex-1 p-3 pr-0">
-        <ul className="flex flex-col gap-5 ">
-          <li className="flex items-center gap-3 hover:bg-secondary p-3 pl-5 rounded-s-xl cursor-pointer hover:border hover:border-gray-700">
-            <Icon color="white" size={25} name="User" />
-            <span className="text-white font-mono text-base tracking-wider">
-              Sobre Mim
-            </span>
-          </li>
-          <li className="flex items-center gap-3  hover:bg-secondary p-3 pl-5 rounded-s-xl cursor-pointer">
-            <Icon color="white" size={25} name="User" />
-            <span className="text-white font-mono text-base tracking-wider">
-              Projetos
-            </span>
-          </li>
-          <li className="flex items-center gap-3  hover:bg-secondary p-3 pl-5 rounded-s-xl cursor-pointer">
-            <Icon color="white" size={25} name="User" />
-            <span className="text-white font-mono text-base tracking-wider">
-              Experiência
-            </span>
-          </li>
-          <li className="flex items-center gap-3  hover:bg-secondary p-3 pl-5 rounded-s-xl cursor-pointer">
-            <Icon color="white" size={25} name="User" />
-            <span className="text-white font-mono text-base tracking-wider">
-              Educação
-            </span>
-          </li>
-          <li className="flex items-center gap-3 hover:bg-secondary p-3 pl-5 rounded-s-xl cursor-pointer">
-            <Icon color="white" size={25} name="User" />
-            <span className="text-white font-mono text-base tracking-wider">
-              Contato
-            </span>
-          </li>
-        </ul>
-      </nav>
+      <Menu Icon={Icon}/>
 
       <div className="flex flex-col gap-4">
         <nav>
@@ -73,7 +41,5 @@ const Sidebar = ({Icon}) => {
     </div>
   );
 };
-
-
 
 export default Sidebar;
