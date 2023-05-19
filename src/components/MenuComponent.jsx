@@ -1,63 +1,76 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Menu = ({ Icon }) => {
+  const [isSelected, setIsSelected] = useState();
+
   return (
     <nav className="mt-4 flex-1 p-3 pr-0">
       <ul className="flex flex-col gap-5 ">
         <li>
-          <Link
+          <NavLink
             to="/"
-            className="flex items-center gap-3 hover:bg-secondary p-3 pl-5 rounded-s-xl cursor-pointer border border-primary hover:border-gray-700"
+            className={({ isActive, isPending }) =>
+              isPending ? "" : isActive ? "navbar bg-secondary" : "navbar"
+            }
           >
             <Icon color="white" size={25} name="User" />
             <span className="text-white font-mono text-base tracking-wider">
               Sobre Mim
             </span>
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
+          <NavLink
             to="/projetos"
-            className="flex items-center gap-3  hover:bg-secondary p-3 pl-5 rounded-s-xl cursor-pointer border border-primary hover:border-gray-700"
+            className={({ isActive, isPending }) =>
+              isPending ? "" : isActive ? "navbar bg-secondary" : "navbar"
+            }
           >
             <Icon color="white" size={25} name="User" />
             <span className="text-white font-mono text-base tracking-wider">
               Projetos
             </span>
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
+          <NavLink
             to="/experiencia"
-            className="flex items-center gap-3  hover:bg-secondary p-3 pl-5 rounded-s-xl cursor-pointer border border-primary hover:border-gray-700"
+            className={({ isActive, isPending }) =>
+              isPending ? "" : isActive ? "navbar bg-secondary" : "navbar"
+            }
           >
             <Icon color="white" size={25} name="User" />
             <span className="text-white font-mono text-base tracking-wider">
               Experiência
             </span>
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
+          <NavLink
             to="/educacao"
-            className="flex items-center gap-3  hover:bg-secondary p-3 pl-5 rounded-s-xl cursor-pointer border border-primary hover:border-gray-700"
+            className={({ isActive, isPending }) =>
+              isPending ? "" : isActive ? "navbar bg-secondary" : "navbar"
+            }
           >
             <Icon color="white" size={25} name="User" />
             <span className="text-white font-mono text-base tracking-wider">
               Educação
             </span>
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
+          <NavLink
             to="/contato"
-            className="flex items-center gap-3  hover:bg-secondary p-3 pl-5 rounded-s-xl cursor-pointer border border-primary hover:border-gray-700"
+            className={({ isActive, isPending }) =>
+              isPending ? "" : isActive ? "navbar bg-secondary" : "navbar"
+            }
           >
             <Icon color="white" size={25} name="User" />
             <span className="text-white font-mono text-base tracking-wider">
               Contato
             </span>
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>

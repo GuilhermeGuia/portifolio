@@ -36,7 +36,7 @@ const About = () => {
         </ul>
       </section>
     </div>
-  );
+  ); 
 };
 
 export default About;

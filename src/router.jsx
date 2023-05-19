@@ -1,14 +1,14 @@
 import React from "react";
 
-import About from "./views/About";
-import Contact from "./views/Contact";
-import Education from "./views/Education";
-import Experience from "./views/Experience";
-import Projects from "./views/Projects";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Education from "./pages/Education";
+import Experience from "./pages/Experience";
+import Projects from "./pages/Projects";
 import { createBrowserRouter } from "react-router-dom";
 
 import App from "./App.jsx";
-import ErrorPage from "./views/ErrorPage";
+import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
